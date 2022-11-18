@@ -12,7 +12,6 @@ This repo contains basic tutorial of how to use github
   + [Making Changes](#changes)
   + [Merging with Master](#merging)
   + [Merge Conflicts](#conflicts)
-  + [Changing File Structure](#changing-file-structure)
 
 3. [Git for Collaboration](#git-collaboration)
   + [Terminology](#terminology)
@@ -212,40 +211,6 @@ Merge with master. You should have a git conflict that looks something like this
 Do you see the lines at the top. The first section is labelled `HEAD` those are from this branch. The next section is from master. Delete the lines, and any other code you want until the cheatsheet looks like how you want it to look.
 
 Afterwards git status, add the files in red, commit, and push. Then make a pull request to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised.
-
-
-<a id="changing-file-structure" name="changing-file-structure"></a>
-### Changing File Structure
-Imagine you're working on a project that's getting bigger in size. As new files are added, it makes sense to group some of them into folders. For example, it's a good idea to keep all CSS files in one folder, JS files in another etc.
-
-Let's assume you've just cloned a repository structured like this:
-```
-index.html
-stylesheet.css
-script.js
-```
-
-However, you'd prefer to split these into folders like:
-```
-css/stylesheet.css
-js/script.js
-index.html
-```
-
-In order to achieve this, `git mv` command comes in handy. Using it to move files *ensures preserving history* of the files you work on. To change file structure like above (and create new folders at the same time) use command:
-```
-mkdir css && git mv stylesheet.css ./css
-mkdir js && git mv script.js ./js
-```
-(This glues `mkdir` and `git mv` commands together with `&&` operator).
-
-Basic function usage is
-```
-git mv <source> <destination>
-```
-The command also takes optional parameters. To find out more, refer to [documentation](http://git-scm.com/docs/git-mv).
-
-
 
 
 <a name="git-collaboration" id="git-collaboration"></a>
