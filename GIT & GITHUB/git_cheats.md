@@ -1,4 +1,4 @@
-﻿# Git Cheatsheet (Basics)
+# Git Cheatsheet (Basics)
 
 This cheatsheet is a list of our most used Git commands, and it countains useful information for those who are getting started.
 
@@ -19,7 +19,7 @@ It is available in the languages above. Since the translation rely on volunteers
 | remote                       | Common repository on eg. Github that all team members to keep that changes in sync with                                 |
 | fork                         | Copy of a repository owned by a different user                                                                          |
 | pull request                 | A method of submitting contributions to a repository                                                                    |
-| HEAD                         | Represents your current working directory                                                                               |
+
 
 ### Configuration
 
@@ -37,9 +37,7 @@ It is available in the languages above. Since the translation rely on volunteers
 | `git clone [repo]`          | Creates local copy of remote repository                  |
 | `git add [directory]`       | Stages specific [directory]                              |
 | `git add [file]`            | Stages specific [file]                                   |
-| `git add -A`                | Stages all changed files                                 |
 | `git add .`                 | Stages new and changed files, NOT deleted files          |
-| `git add -u`                | Stages changed and deleted files, NOT new files          |
 | `git commit -m "[message]"` | Commit everything that is staged                         |
 | `git status`                | Shows status of changes as untracked, modified or staged |
 
@@ -60,9 +58,6 @@ It is available in the languages above. Since the translation rely on volunteers
 | --------------------------- | ------------------------------------------------------------------------------------------- |
 | `git checkout -- [file]`    | Replace file with contents from HEAD                                                        |
 | `git revert [commit]`       | Create new commit that undoes changes made in [commit], then apply it to the current branch |
-| `git reset [file]`          | Remove [file] from staging area                                                             |
-| `git reset --hard HEAD`     | Removes all local changes in working directory                                              |
-| `git reset --hard [commit]` | Reset your HEAD pointer to previous commit and discard all changes since then               |
 
 ### Branches
 
@@ -75,18 +70,14 @@ It is available in the languages above. Since the translation rely on volunteers
 | `git branch -d [branch]`   | Deletes the [branch]               |
 | `git push origin [branch]` | Push [branch] to remote            |
 | `git branch`               | Lists local branches               |
-| `git branch -r`            | Lists remote branches              |
-| `git branch -a`            | Lists local and remote branches    |
 
 ### History
 
 | Key/Command                | Description                                                      |
 | -------------------------- | ---------------------------------------------------------------- |
 | `git log`                  | Lists version history for the current branch                     |
-| `git log --author=[name]`  | Lists version history for the current branch from certain author |
 | `git log --oneline`        | Lists compressed version history for the current branch          |
 | `git show [commit]`        | Outputs metadata and content changes of the specified commit     |
-| `git blame [file]`         | Shows who changed what and when in file                          |
 
 ### Gitignore
 
